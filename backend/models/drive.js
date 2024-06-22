@@ -2,7 +2,6 @@ const db = require("../db");
 const {
   BadRequestError,
   NotFoundError,
-  ExpressError,
 } = require("../expressError");
 const { sqlForPartialUpdate } = require("../helpers/updateSql");
 
@@ -77,6 +76,8 @@ class Drive {
     const drive = res.rows[0];
 
     if (!drive) throw new NotFoundError(`No Drive exists with name: ${title}`);
+
+    return drive;
   }
 
   /* Updates existing drive, not all fields are required, and only changes provided fields.*/
