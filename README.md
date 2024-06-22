@@ -12,4 +12,4 @@ User flow would be to login, (eventually I would like to save a token to localSt
 
 Database Layout:
 
-![Database](Dblayout.PNG)
+![Database](Dblayoutv2.PNG)
