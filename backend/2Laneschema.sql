@@ -3,6 +3,7 @@ CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     username VARCHAR(20) NOT NULL,
     hashed_pw text NOT NULL,
+    email text NOT NULL CHECK (position('@' IN email) > 1),
     created_at TIMESTAMP,
     is_admin BOOLEAN NOT NULL DEFAULT FALSE
 )
@@ -24,9 +25,9 @@ CREATE TABLE posts(
 
 CREATE TABLE drives (
     id SERIAL PRIMARY KEY,
-    title VARCHAR,
+    title VARCHAR(30),
     description TEXT,
-    route_link, VARCHAR,
+    route_link, TEXT,
     created_at TIMESTAMP
 )
 
