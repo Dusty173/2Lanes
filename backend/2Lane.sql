@@ -4,8 +4,8 @@ CREATE DATABASE twolane;
 
 \i 2Laneschema.sql
 
-DROP DATABASE twolane-test;
-CREATE DATABASE twolane-test;
-\connect test
+DROP DATABASE twolanetest;
+CREATE DATABASE twolanetest;
+\connect twolanetest
 
 \i 2Laneschema.sql
