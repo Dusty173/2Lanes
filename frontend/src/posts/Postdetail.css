@@ -1,0 +1,43 @@
+.post-title {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.post-by {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.post-body {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  max-width: 60vw;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.delete-btn {
+  color: black;
+  background-color: darkred;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  display: flex;
+  margin: auto;
+}
+
+.delete-btn:hover {
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.comment {
+  color: darkred;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}

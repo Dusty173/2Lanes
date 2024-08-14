@@ -1,0 +1,86 @@
+.drive-title {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.time {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.drive-description {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  max-width: 60vw;
+}
+.submit-btn {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.car-select {
+  border-radius: 7px;
+  text-align: center;
+}
+
+.people-title {
+  margin-bottom: 5px;
+  color: yellowgreen;
+  display: flex;
+  justify-content: center;
+}
+
+.join-form-title {
+  color: yellow;
+}
+
+.people-list {
+  display: flexbox;
+  margin: auto;
+  margin-bottom: 10px;
+  justify-content: center;
+  max-width: 60vw;
+}
+
+.person {
+  margin: auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  max-width: 40vw;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.leave-btn {
+  color: white;
+  display: flex;
+  margin: auto;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.leave-btn:hover {
+  background-color: lightcoral;
+}
+
+.delete-drive-btn {
+  background-color: red;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-right: auto;
+  color: white;
+}
+
+.warn {
+  color: red;
+}

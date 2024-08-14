@@ -1,0 +1,45 @@
+.Profile {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(34, 34, 34),
+    rgb(0, 0, 0)
+  );
+}
+
+.username {
+  position: relative;
+  text-align: center;
+}
+
+.userdata {
+  display: flexbox;
+  padding-top: 5em;
+  position: relative;
+  text-align: center;
+}
+
+.userdata li {
+  color: yellow;
+}
+
+.userdata div {
+  padding-left: 0.5em;
+}
+
+.admin-status {
+  color: white;
+}
+
+.btn {
+  display: inline-flex;
+  color: yellow;
+  padding: 2px;
+  position: relative;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  background-color: rgb(24, 24, 24);
+}

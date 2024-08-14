@@ -1,0 +1,17 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: yellow;
+  padding: 2px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  background-color: rgb(24, 24, 24);
+  margin-bottom: 0.5em;
+}
+
+.btn:hover {
+  background-color: grey;
+}

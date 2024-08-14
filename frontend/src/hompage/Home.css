@@ -1,0 +1,37 @@
+.Home {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(34, 34, 34),
+    rgb(0, 0, 0)
+  );
+}
+
+h1 {
+  text-align: center;
+  border: 1px solid yellow;
+  border-radius: 0.5em;
+  width: inherit;
+  color: white;
+}
+
+h3 {
+  color: yellowgreen;
+  width: inherit;
+  text-align: center;
+}
+
+.app-description {
+  color: white;
+  width: inherit;
+  text-align: center;
+}
+
+.msg {
+  color: yellow;
+  text-align: center;
+  padding: 2px;
+  font-style: italic;
+}

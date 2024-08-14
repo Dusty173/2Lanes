@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/createDriveSchema.json",
+    "type": "object",
+    "properties": {
+      "driveName": {
+        "type": "string"
+      },
+      "user_id": {
+        "type": "integer"
+      },
+      "car_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "driveName",
+      "user_id",
+      "car_id"
+    ]
+  }

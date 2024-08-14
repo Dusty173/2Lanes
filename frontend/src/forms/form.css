@@ -1,0 +1,86 @@
+.carform-title {
+  color: white;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  justify-content: center;
+  max-width: 20em;
+  margin: auto;
+  align-items: center;
+  border-top: 2px solid white;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(122, 122, 122),
+    rgb(43, 43, 43)
+  );
+}
+
+form label {
+  display: flex;
+  justify-content: center;
+  color: yellow;
+}
+
+form input {
+  background-color: white;
+  color: grey;
+  width: 16em;
+  max-width: 16em;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+form input:focus {
+  background-color: rgb(255, 255, 150);
+  outline: none;
+}
+
+form button {
+  background-color: yellow;
+  border: none;
+  border-radius: 0.5em;
+}
+
+form button:hover {
+  background-color: green;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.drive-form-description {
+  background-color: white;
+  color: grey;
+  padding: 1em;
+  border-radius: 10px;
+  width: 15em;
+  height: 15em;
+  max-width: 15em;
+  max-height: 20em;
+  border: 2px solid transparent;
+}
+
+.drive-form-description:focus {
+  outline: none;
+  background-color: rgb(255, 255, 150);
+}
+
+.body {
+  background-color: white;
+  color: grey;
+  padding: 1em;
+  border-radius: 10px;
+  width: 15em;
+  height: 15em;
+  max-width: 15em;
+  max-height: 20em;
+  border: 2px solid transparent;
+}
+
+.body:focus {
+  outline: none;
+  background-color: rgb(255, 255, 150);
+}

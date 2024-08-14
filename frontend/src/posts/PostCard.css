@@ -1,0 +1,31 @@
+.post-card-link {
+  border: 2px solid white;
+  border-radius: 0.5em;
+  color: white;
+  background-image: linear-gradient(to bottom right, rgb(63, 63, 63), black);
+  max-width: 60vw;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.post-card-body:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.post-card-title {
+  text-decoration: none;
+  color: yellow;
+}
+
+.route-link {
+  display: flex;
+  justify-content: center;
+}
+
+.posted-date {
+  display: flex;
+  justify-content: center;
+}
