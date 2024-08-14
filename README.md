@@ -10,7 +10,7 @@ The data I plan on using is getting custom routes from any Maps provider,(initia
 
 The database will have a few tables, making functionality for a user to save a vehicle to the Garage table, leave some posts, and join drives. 
 
-*You can visit the site TwoLanes!*
+## *You can visit the site TwoLanes!*
 
 *Try it for yourself at:* https://two-lanes.onrender.com
 
