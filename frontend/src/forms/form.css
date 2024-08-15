@@ -22,6 +22,7 @@ form label {
   display: flex;
   justify-content: center;
   color: yellow;
+  margin-top: 10px;
 }
 
 form input {
@@ -40,6 +41,8 @@ form input:focus {
 }
 
 form button {
+  margin-top: 15px;
+  margin-bottom: 10px;
   background-color: yellow;
   border: none;
   border-radius: 0.5em;
@@ -83,4 +86,10 @@ form button:hover {
 .body:focus {
   outline: none;
   background-color: rgb(255, 255, 150);
+}
+
+.sign-up-title {
+  color: white;
+  display: flex;
+  justify-content: center;
 }

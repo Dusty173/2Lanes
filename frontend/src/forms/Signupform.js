@@ -28,7 +28,7 @@ function SignupForm({ signup }) {
   return (
     <>
       <div className="signup-page">
-        <h2>Sign Up!</h2>
+        <h2 className="sign-up-title">Sign Up!</h2>
         <div className="signupform">
           <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username</label>
@@ -54,7 +54,7 @@ function SignupForm({ signup }) {
               onChange={handleChange}
             />
 
-            <button onClick={handleSubmit}>Submit</button>
+            <button onClick={handleSubmit}>Sign Up!</button>
           </form>
         </div>
       </div>

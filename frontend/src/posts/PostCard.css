@@ -3,12 +3,16 @@
   border-radius: 0.5em;
   color: white;
   background-image: linear-gradient(to bottom right, rgb(63, 63, 63), black);
-  max-width: 60vw;
+  width: 60vw;
   margin: auto;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   text-decoration: none;
+}
+
+.post-card-body {
+  width: 60vw;
 }
 
 .post-card-body:hover {
@@ -18,6 +22,8 @@
 .post-card-title {
   text-decoration: none;
   color: yellow;
+  display: flex;
+  justify-content: center;
 }
 
 .route-link {
@@ -26,6 +32,21 @@
 }
 
 .posted-date {
+  display: flex;
+  justify-content: center;
+}
+
+.post-card-date {
+  display: flex;
+  justify-content: center;
+}
+
+.post-author {
+  display: flex;
+  justify-content: center;
+}
+
+.post-content {
   display: flex;
   justify-content: center;
 }
