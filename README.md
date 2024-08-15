@@ -21,11 +21,11 @@ The database will have a few tables, making functionality for a user to save a v
 
 
 ## Features:
-    *User profile with edit form,
-    *Ability to create a Post that others can see, and the delete button only shows up for users who created 
+    +User profile with edit form,
+    +Ability to create a Post that others can see, and the delete button only shows up for users who created 
         that post OR an administrator.
-    *Ability to store cars in "My Garage", and use that garage to join drives
-    *Ability to Join drives, get Routes for a drive, and see who else is going on that drive
+    +Ability to store cars in "My Garage", and use that garage to join drives
+    +Ability to Join drives, get Routes for a drive, and see who else is going on that drive
 
 ## API:
     I created my own API to interact with a database that I designed. setting routes and passing data as 
@@ -37,22 +37,22 @@ The database will have a few tables, making functionality for a user to save a v
     Route for a drive.
 
 ## Tech:
-*React
-*Node
-*Postgres
-*jsonwebtokens
-*jsonschema
-*bcrypt
-*axios
+    +React
+    +Node
+    +Postgres
+    +jsonwebtokens
+    +jsonschema
+    +bcrypt
+    +axios
 
 
 ## For the Future:
-*Give users ability to add a photo for any cars a user has, profile photos
-*Complete logic for comments on Posts, possibly on Drives for any suggestions people may have.
-*A search bar to search for users, as well as make every username clickable on 
-    posts/drives that would take you to that persons profile
-*Boolean for Profile Privacy so that if you don't want people seeing certain 
-    data on your profile then you can protect it.
+    +Give users ability to add a photo for any cars a user has, profile photos
+    +Complete logic for comments on Posts, possibly on Drives for any suggestions people may have.
+    +A search bar to search for users, as well as make every username clickable on 
+        posts/drives that would take you to that persons profile
+    +Boolean for Profile Privacy so that if you don't want people seeing certain 
+        data on your profile then you can protect it.
 
 
 
