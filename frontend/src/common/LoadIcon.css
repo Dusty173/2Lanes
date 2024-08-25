@@ -1,7 +1,34 @@
 .LoadIcon {
-  margin: 200px auto 0 auto;
+  width: 50px;
+  height: 50px;
+  --c: linear-gradient(yellow 0 0);
+  background: var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: load-1 1s infinite, load-2 1s infinite;
+}
+
+@keyframes load-1{
+  0%, 100% {
+    background-size: 10px 100%;
+  }
+
+  33%, 66% {
+    background-size: 10px 40%;
+  }
+}
+
+@keyframes load-2 {
+  0%, 33%{
+    background-position: 0 0, 50% 100%, 100% 0;
+  }
+
+  66%, 100%{
+    background-position: 0 100%, 50% 0, 100% 100%;
+  }
+}
+
+.LoadText{
+  margin: auto;
   color: yellow;
-  font-size: 24pt;
-  font-weight: bold;
-  text-align: center;
+
 }
