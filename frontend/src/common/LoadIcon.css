@@ -1,3 +1,9 @@
+div .LoadIcon {
+  margin: auto;
+  margin-top: 25em;
+  
+}
+
 .LoadIcon {
   width: 50px;
   height: 50px;
@@ -7,28 +13,32 @@
   animation: load-1 1s infinite, load-2 1s infinite;
 }
 
-@keyframes load-1{
-  0%, 100% {
+@keyframes load-1 {
+  0%,
+  100% {
     background-size: 10px 100%;
   }
 
-  33%, 66% {
+  33%,
+  66% {
     background-size: 10px 40%;
   }
 }
 
 @keyframes load-2 {
-  0%, 33%{
+  0%,
+  33% {
     background-position: 0 0, 50% 100%, 100% 0;
   }
 
-  66%, 100%{
+  66%,
+  100% {
     background-position: 0 100%, 50% 0, 100% 100%;
   }
 }
 
-.LoadText{
-  margin: auto;
+div .LoadText {
+  display: flex;
+  justify-content: center;
   color: yellow;
-
 }

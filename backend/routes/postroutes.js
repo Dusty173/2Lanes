@@ -31,7 +31,7 @@ router.post("/new", ensureLoggedIn, async (req, res, next) => {
   try {
     const validator = jsonschema.validate(req.body, createPostSchema);
     if (!validator.valid) {
-      const errs = validator.errors.map((e) => e.stack);
+      const errs = validator.errors.map((e) => e.message);
       throw new BadRequestError(errs);
     }
     const post = Post.create(req.body);
@@ -57,7 +57,7 @@ router.patch("/:id", ensureCorrectUserOrAdmin, async (req, res, next) => {
   try {
     const validator = jsonschema.validate(req.body, updatePostSchema);
     if (!validator.valid) {
-      const errs = validator.errors.map((e) => e.stack);
+      const errs = validator.errors.map((e) => e.message);
       throw new BadRequestError(errs);
     }
     const post = await Post.update(req.params.id, req.body);

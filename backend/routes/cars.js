@@ -85,7 +85,7 @@ router.patch(
     try {
       const validator = jsonschema.validate(req.body, updateCarSchema);
       if (!validator.valid) {
-        const errs = validator.errors.map((e) => e.stack);
+        const errs = validator.errors.map((e) => e.message);
         throw new BadRequestError(errs);
       }
 

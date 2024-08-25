@@ -24,7 +24,7 @@ router.get("/", ensureLoggedIn, async (req, res, next) => {
   try {
     const validator = jsonschema.validate(q, searchDriveSchema);
     if (!validator.valid) {
-      const errs = validator.errors.map((e) => e.stack);
+      const errs = validator.errors.map((e) => e.message);
       throw new BadRequestError(errs);
     }
     const drives = await Drive.getDrives(q);
@@ -51,7 +51,7 @@ router.patch("/:title", ensureCorrectUserOrAdmin, async (req, res, next) => {
   try {
     const validator = jsonschema.validate(req.body, updateDriveSchema);
     if (!validator.valid) {
-      const errs = validator.errors.map((e) => e.stack);
+      const errs = validator.errors.map((e) => e.message);
       throw new BadRequestError(errs);
     }
 
@@ -79,7 +79,7 @@ router.post("/", ensureAdmin, async (req, res, next) => {
   try {
     const validator = jsonschema.validate(req.body, createDriveSchema);
     if (!validator.valid) {
-      const errs = validator.errors.map((e) => e.stack);
+      const errs = validator.errors.map((e) => e.message);
       throw new BadRequestError(errs);
     }
     const drive = await Drive.create(req.body);
@@ -95,7 +95,7 @@ router.post("/:title/join", ensureLoggedIn, async (req, res, next) => {
   try {
     const validator = jsonschema.validate(req.body, joinDriveSchema);
     if (!validator.valid) {
-      const errs = validator.errors.map((e) => e.stack);
+      const errs = validator.errors.map((e) => e.message);
       throw new BadRequestError(errs);
     }
     const join = await Drive.joinDrive(req.body);
