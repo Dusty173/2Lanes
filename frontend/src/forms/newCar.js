@@ -1,25 +1,29 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../Usercontext";
-
+import Alert from "../common/Alert";
 import TwolaneApi from "../Api";
 
 function CarForm() {
   const { currUser } = useContext(UserContext);
   const navigate = useNavigate();
+  const [formErrors, setFormErrors] = useState([]);
   const [formData, setFormData] = useState({
     make: "",
     model: "",
     model_year: "",
   });
 
+  console.debug(formErrors);
+
   async function handleSubmit(evt) {
     evt.preventDefault();
     let result = await TwolaneApi.addCar(currUser.username, formData);
     if (result) {
+      console.log("RESULT:", result.err);
       navigate("/cars");
     } else {
-      console.log("unable to submit");
+      setFormErrors(result.err);
     }
   }
 
@@ -33,7 +37,7 @@ function CarForm() {
       <div className="add-car-page">
         <h2 className="carform-title">Add a car</h2>
         <div className="carform">
-          <form onSubmit={handleSubmit}>
+          <form>
             <label htmlFor="make">Make</label>
             <input
               id="make"
@@ -62,6 +66,11 @@ function CarForm() {
               required
               placeholder="YYYY"
             />
+
+            {formErrors.length ? (
+              <Alert type="danger" messages={formErrors} />
+            ) : null}
+
             <button onClick={handleSubmit}>Submit</button>
           </form>
         </div>

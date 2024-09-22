@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./form.css";
+import Alert from "../common/Alert";
 
 function LoginForm({ login }) {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const navigate = useNavigate();
+  const [formErrors, setFormErrors] = useState([]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -12,8 +14,8 @@ function LoginForm({ login }) {
     if (result.success) {
       navigate("/");
     } else {
-      navigate("/");
-      console.error("Error while logging in, Login aborted.");
+      setFormErrors(result.err);
+      console.log("ERRORS", result.err);
     }
   }
   function handleChange(e) {
@@ -49,6 +51,11 @@ function LoginForm({ login }) {
             required
           />
         </div>
+        
+        {formErrors.length ? (
+          <Alert type="danger" messages={formErrors} />
+        ) : null}
+
         <button onClick={handleSubmit}>Log in</button>
       </form>
     </>

@@ -2,10 +2,11 @@ import React, { useState, useContext } from "react";
 import UserContext from "../Usercontext";
 import TwolaneApi from "../Api";
 import "./profileform.css";
+import Alert from "../common/Alert";
 
 function ProfileForm() {
   const { currUser, setCurrUser } = useContext(UserContext);
-  console.log("ProfileForm USER:", currUser);
+  const [formErrors, setFormErrors] = useState([]);
   const [formData, setFormData] = useState({
     email: currUser.email,
     username: currUser.username,
@@ -25,6 +26,7 @@ function ProfileForm() {
     try {
       updatedUser = await TwolaneApi.saveProfile(username, profileData);
     } catch (err) {
+      setFormErrors(err);
       return;
     }
 
@@ -62,6 +64,11 @@ function ProfileForm() {
             onChange={handleChange}
           />
         </div>
+
+        {formErrors.length ? (
+          <Alert type="danger" messages={formErrors} />
+        ) : null}
+
         <button onClick={handleSubmit}>Save Changes</button>
       </form>
     </>

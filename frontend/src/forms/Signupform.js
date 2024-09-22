@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./form.css";
+import Alert from "../common/Alert";
 
 function SignupForm({ signup }) {
   const navigate = useNavigate();
+  const [formErrors, setFormErrors] = useState([]);
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -16,7 +18,7 @@ function SignupForm({ signup }) {
     if (result.success) {
       navigate("/drives");
     } else {
-      console.log("unable to submit");
+      setFormErrors(result.err);
     }
   }
 
@@ -53,6 +55,10 @@ function SignupForm({ signup }) {
               value={formData.password}
               onChange={handleChange}
             />
+
+            {formErrors.length ? (
+              <Alert type="danger" messages={formErrors} />
+            ) : null}
 
             <button onClick={handleSubmit}>Sign Up!</button>
           </form>
