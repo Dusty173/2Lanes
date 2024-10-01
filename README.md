@@ -12,7 +12,8 @@ The database will have a few tables, making functionality for a user to save a v
 
 ## *You can visit the site TwoLanes!*
 
-*Try it for yourself at:* https://two-lanes.onrender.com
+*Try it for yourself at:* https://two-lanes.onrender.com 
+**PLEASE NOTE Initial load time is long due to Render.com free instance's spinning down with inactivity**
 
 ## Database Layout:
 
