@@ -8,9 +8,12 @@ function UserProfile() {
 
   return (
     <>
-      <Link className="btn" to="/users/edit">
-        Edit profile
-      </Link>
+      <div className="btn-container">
+        <Link className="btn" to="/users/edit">
+          Edit profile
+        </Link>
+      </div>
+
       <div className="Profile">
         <h2 className="username">{currUser.username}</h2>
       </div>

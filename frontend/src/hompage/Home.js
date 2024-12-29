@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import UserContext from "../Usercontext";
 import "./Home.css";
+import PostsPage from "../posts/PostsPage";
 
 function Homepage() {
   const { currUser } = useContext(UserContext);
@@ -12,9 +13,14 @@ function Homepage() {
           <i>A place to organize road trips down two lane back roads!</i>
         </p>
         {currUser ? (
-          <h3>
-            <i>Welcome back, {currUser.username}!</i>
-          </h3>
+          <>
+            <h3>
+              <i>Welcome back, {currUser.username}!</i>
+            </h3>
+            <div>
+              <PostsPage />
+            </div>
+          </>
         ) : (
           <p className="msg">Log in to see more!</p>
         )}

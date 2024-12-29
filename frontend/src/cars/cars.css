@@ -14,17 +14,12 @@ body {
   justify-content: center;
   border: 1px solid white;
   border-radius: 5px;
-  margin-left: 1em;
+  margin: 0.5em;
   float: left;
 }
 
-.car {
-  display: flex;
-  justify-content: center;
-}
-
 .remove-btn {
-  margin-left: 3em;
+  margin-left: 1em;
   color: black;
   background-color: yellow;
   border-radius: 5px;
@@ -33,6 +28,7 @@ body {
 
 .remove-btn:hover {
   background-color: red;
+  cursor: pointer;
 }
 
 .not-found {

@@ -8,7 +8,7 @@ import "./drives.css";
 
 function DrivesList() {
   console.debug("Drive Page");
-  const { currUser, setCurrUser } = useContext(UserContext);
+  const { currUser } = useContext(UserContext);
   const [drives, setDrives] = useState(null);
 
   useEffect(function getAllDrivesOnLoad() {
@@ -26,9 +26,11 @@ function DrivesList() {
   return (
     <>
       {currUser.is_admin ? (
-        <Link className="btn" to="/drives/new">
-          Create Drive
-        </Link>
+        <div className="btn-container">
+          <Link className="btn" to="/drives/new">
+            Create Drive
+          </Link>
+        </div>
       ) : (
         <span></span>
       )}

@@ -9,9 +9,10 @@
   border: 1px solid white;
   border-radius: 0.5em;
   background-color: rgb(24, 24, 24);
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 .btn:hover {
   background-color: grey;
+  cursor: pointer;
 }

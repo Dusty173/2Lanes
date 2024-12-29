@@ -29,11 +29,16 @@ function MyGarage() {
 
   return (
     <>
-      <button className="btn" onClick={handleClick}>Add Car</button>
+      <div className="btn-container">
+        <button className="btn" onClick={handleClick}>
+          Add Car
+        </button>
+      </div>
+
       {cars.length ? (
         <div className="cars-list">
           {cars.map((c) => (
-            <div>
+            <div className="car-card">
               <Car
                 id={c.id}
                 make={c.make}

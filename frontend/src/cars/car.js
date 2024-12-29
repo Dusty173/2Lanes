@@ -14,14 +14,16 @@ function Car({ id, make, model, model_year }) {
   }
 
   return (
-    <div  className="car-card">
-      <ul  className="car">
+    <>
+      <ul className="car">
         <li className="year">{model_year}</li>
         <li className="make">{make}</li>
         <li className="model">{model}</li>
       </ul>
-      <button className="remove-btn" onClick={handleRemove}>Remove</button>
-    </div>
+      <button className="remove-btn" onClick={handleRemove}>
+        Remove
+      </button>
+    </>
   );
 }
 

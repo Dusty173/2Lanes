@@ -26,11 +26,11 @@ function Navigation({ logout }) {
             My Garage
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink className="nav-link" to="/posts">
             Posts
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <Link className="nav-link-logout" to="/" onClick={logout}>
             Logout {currUser.username}

@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import useLocalStorage from "./hooks/useLocalStorage";
 import Navigation from "./navbar/Navbar";
 import Routes from "./Routes";
-import LoadIcon from "./common/LoadIcon";
+import InitLoad from "./common/InitialLoad";
 import TwolaneApi from "./Api";
 import UserContext from "./Usercontext";
 import jwt from "jsonwebtoken";
@@ -73,7 +73,7 @@ function App() {
     }
   }
 
-  if (!loaded) return <LoadIcon />;
+  if (!loaded) return <InitLoad />;
 
   return (
     <BrowserRouter>
